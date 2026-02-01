@@ -1,0 +1,36 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.csproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Android/Gradle (Unity generates these)
+.gradle/
+**/build/
+*.apk
+*.aab
+
+# Unity Bee / IL2CPP / cache stuff
+**/Bee/
+**/Il2CppBuildCache/
+**/.utmp/
