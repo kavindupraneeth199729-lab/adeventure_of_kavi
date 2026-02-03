@@ -4,6 +4,8 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 10;
+    public string enemyName = "Enemy"; // Name to display
+    public bool enableSimpleAI = true; // Toggle for default Dino behavior
     private int currentHealth;
     
     // Attack Cooldown
@@ -43,6 +45,7 @@ public class EnemyHealth : MonoBehaviour
         if (HealthUI.Instance != null)
         {
             HealthUI.Instance.UpdateEnemyHealth((float)currentHealth / maxHealth);
+            HealthUI.Instance.SetEnemyName(enemyName);
         }
 
         Debug.Log($"{gameObject.name} current health: {currentHealth}");
@@ -50,6 +53,12 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+        }
+        else
+        {
+             // Optional: Trigger specific hit reaction if script exists
+             MushroomEnemy me = GetComponent<MushroomEnemy>();
+             if (me != null) me.TakeDamageEffect();
         }
     }
 
@@ -61,12 +70,25 @@ public class EnemyHealth : MonoBehaviour
             HealthUI.Instance.HideEnemyHealth();
         }
         
-        Debug.Log(gameObject.name + " destroyed!");
-        Destroy(gameObject);
+        MushroomEnemy me = GetComponent<MushroomEnemy>();
+        if (me != null)
+        {
+            me.DieEffect();
+            // Let animation finish before destroy? 
+            // The DieEffect disables collisions, so we can destroy after some time.
+            Destroy(gameObject, 2f); 
+        }
+        else
+        {
+            Debug.Log(gameObject.name + " destroyed!");
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (!enableSimpleAI) return; // Skip if external script handles AI
+        
         if (collision.CompareTag("Player"))
         {
             float dist = Vector2.Distance(transform.position, collision.transform.position);
@@ -78,6 +100,7 @@ public class EnemyHealth : MonoBehaviour
                 if (HealthUI.Instance != null)
                 {
                      HealthUI.Instance.UpdateEnemyHealth((float)currentHealth / maxHealth);
+                     HealthUI.Instance.SetEnemyName(enemyName);
                 }
                 
                 // Deal damage every 1 second (cooldown)

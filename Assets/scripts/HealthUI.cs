@@ -128,6 +128,15 @@ public class HealthUI : MonoBehaviour
         }
     }
     
+    public void SetEnemyName(string name)
+    {
+        if (enemyHealthBarObj != null)
+        {
+            Text lbl = enemyHealthBarObj.GetComponentInChildren<Text>();
+            if (lbl != null) lbl.text = name;
+        }
+    }
+
     public void HideEnemyHealth()
     {
         if (enemyHealthBarObj != null) enemyHealthBarObj.SetActive(false);

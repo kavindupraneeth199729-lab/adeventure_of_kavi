@@ -24,11 +24,14 @@ private bool attack3Triggered = false;
     private bool facingRight = true; // Tracks the current facing direction
 
     private bool isAttacking = false;
+    private float initialX;
+    public float leftLimit = 2f; // Maximum distance to moving left from spawn
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); // Get the Animator component
+        initialX = transform.position.x; // Record spawn position
         
         // Initialize Health
         currentHealth = maxHealth;
@@ -45,6 +48,13 @@ private bool attack3Triggered = false;
     {
         // Update horizontal velocity
         rb.linearVelocity = new Vector2(moveDirection * speed, rb.linearVelocity.y);
+
+        // Clamp movement to the left
+        if (transform.position.x < initialX - leftLimit)
+        {
+            transform.position = new Vector3(initialX - leftLimit, transform.position.y, transform.position.z);
+            rb.linearVelocity = new Vector2(Mathf.Max(0, rb.linearVelocity.x), rb.linearVelocity.y);
+        }
 
         // Jump logic
         if (isJumping && Mathf.Abs(rb.linearVelocity.y) < 0.001f)
