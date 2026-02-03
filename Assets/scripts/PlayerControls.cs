@@ -23,6 +23,8 @@ private bool attack3Triggered = false;
     private float moveDirection = 0f; // Tracks left (-1), right (1), or no input (0)
     private bool facingRight = true; // Tracks the current facing direction
 
+    private bool isAttacking = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -64,9 +66,14 @@ private bool attack3Triggered = false;
         // Update animator parameters
         animator.SetFloat("xVelocity", Mathf.Abs(rb.linearVelocity.x)); // Absolute value for horizontal movement
         animator.SetFloat("yVelocity", rb.linearVelocity.y); // Vertical velocity
-        animator.SetBool("isJumping", !IsGrounded()); // Set isJumping based on ground status
+        
+        // Only update Jump state if NOT attacking to prevent overriding attack animation
+        if (!isAttacking) 
+        {
+            animator.SetBool("isJumping", !IsGrounded());
+        }
     }
-
+    
     // Methods for button events
     public void MoveLeft()
     {
@@ -106,23 +113,43 @@ private bool attack3Triggered = false;
         // Simple ground check using the player's vertical velocity
         return Mathf.Abs(rb.linearVelocity.y) < 0.001f;
     }
-   public void Attack1()
-{
-    attack1Triggered = true;
-    PerformAttack();
-}
 
-public void Attack2()
-{
-    attack2Triggered = true;
-    PerformAttack();
-}
 
-public void Attack3()
-{
-    attack3Triggered = true;
-    PerformAttack();
-}
+    public void Attack1()
+    {
+        attack1Triggered = true;
+        PerformAttack();
+        StartCoroutine(AttackCooldown("attack"));
+    }
+
+    public void Attack2()
+    {
+        attack2Triggered = true;
+        PerformAttack();
+        StartCoroutine(AttackCooldown("attack2"));
+    }
+
+    public void Attack3()
+    {
+        attack3Triggered = true;
+        PerformAttack();
+        StartCoroutine(AttackCooldown("attack3"));
+    }
+    
+    IEnumerator AttackCooldown(string stateName)
+    {
+        isAttacking = true;
+        animator.SetBool("isJumping", false); // Force landed state so AnyState->Jump doesn't interrupt
+        
+        // If in air, FORCE play the animation because transition might not exist
+        if (!IsGrounded())
+        {
+            animator.Play(stateName);
+        }
+        
+        yield return new WaitForSeconds(0.5f); // Duration of attack
+        isAttacking = false;
+    }
 
 private void PerformAttack()
 {
