@@ -42,6 +42,27 @@ private bool attack3Triggered = false;
              GameObject uiObj = new GameObject("HealthManager");
              uiObj.AddComponent<HealthUI>();
         }
+
+        // --- INPUT FIX FOR ANDROID ---
+        // Verify EventSystem exists and use the LEGACY StandaloneInputModule
+        // (Because we removed the New Input System package, the old module might be missing/broken)
+        UnityEngine.EventSystems.EventSystem es = UnityEngine.EventSystems.EventSystem.current;
+        if (es == null)
+        {
+            GameObject esObj = new GameObject("EventSystem");
+            es = esObj.AddComponent<UnityEngine.EventSystems.EventSystem>();
+            esObj.AddComponent<UnityEngine.EventSystems.StandaloneInputModule>();
+            Debug.Log("Created new EventSystem with StandaloneInputModule.");
+        }
+        else
+        {
+            // If EventSystem exists but has no StandaloneInputModule, add it
+            if (es.GetComponent<UnityEngine.EventSystems.StandaloneInputModule>() == null)
+            {
+                es.gameObject.AddComponent<UnityEngine.EventSystems.StandaloneInputModule>();
+                Debug.Log("Added StandaloneInputModule to existing EventSystem.");
+            }
+        }
     }
 
     void Update()
