@@ -5,6 +5,10 @@ using System.Collections.Generic;
 public class PlayerControls : MonoBehaviour
 {  public float speed = 5f; // Horizontal movement speed
     public float jumpForce = 10f; // Jump force
+
+    // HEALTH SYSTEM
+    public int maxHealth = 20;
+    private int currentHealth;
     private bool attack1Triggered = false;
 private bool attack2Triggered = false;
 private bool attack3Triggered = false;
@@ -12,6 +16,9 @@ private bool attack3Triggered = false;
 
     private Rigidbody2D rb;
     private Animator animator; // Animator component reference
+    public Transform attackPoint; // Point from which to detect enemies
+    public float attackRange = 1.5f; // Range of the attack
+    public LayerMask enemyLayers = ~0; // Layers to consider as enemies (Everything by default)
     private bool isJumping = false; // To prevent double jumps
     private float moveDirection = 0f; // Tracks left (-1), right (1), or no input (0)
     private bool facingRight = true; // Tracks the current facing direction
@@ -20,6 +27,16 @@ private bool attack3Triggered = false;
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); // Get the Animator component
+        
+        // Initialize Health
+        currentHealth = maxHealth;
+        
+        // Ensure UI exists
+        if (HealthUI.Instance == null)
+        {
+             GameObject uiObj = new GameObject("HealthManager");
+             uiObj.AddComponent<HealthUI>();
+        }
     }
 
     void Update()
@@ -92,16 +109,55 @@ private bool attack3Triggered = false;
    public void Attack1()
 {
     attack1Triggered = true;
+    PerformAttack();
 }
 
 public void Attack2()
 {
     attack2Triggered = true;
+    PerformAttack();
 }
 
 public void Attack3()
 {
     attack3Triggered = true;
+    PerformAttack();
+}
+
+private void PerformAttack()
+{
+    // Use attackPoint if assigned, otherwise use player position
+    Vector3 pos = attackPoint != null ? attackPoint.position : transform.position;
+    
+    // If no attackPoint, shift the detection forward slightly
+    if (attackPoint == null)
+    {
+        pos += (facingRight ? Vector3.right : Vector3.left) * 0.5f;
+    }
+
+    // Detect enemies in range of attack
+    Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(pos, attackRange, enemyLayers);
+
+    // Damage them
+    foreach (Collider2D enemy in hitEnemies)
+    {
+        EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
+        {
+            enemyHealth.TakeDamage(1);
+        }
+    }
+}
+
+// Visualize the attack range in the editor
+private void OnDrawGizmosSelected()
+{
+    Vector3 pos = attackPoint != null ? attackPoint.position : transform.position;
+    if (attackPoint == null)
+    {
+        pos += (facingRight ? Vector3.right : Vector3.left) * 0.5f;
+    }
+    Gizmos.DrawWireSphere(pos, attackRange);
 }
 
 void FixedUpdate()
@@ -122,5 +178,22 @@ void FixedUpdate()
         attack3Triggered = false;
     }
 }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        Debug.Log("Player Took Damage! Current: " + currentHealth);
+        
+        if (HealthUI.Instance != null)
+        {
+             HealthUI.Instance.UpdatePlayerHealth((float)currentHealth / maxHealth);
+        }
+
+        if (currentHealth <= 0)
+        {
+            Debug.Log("PLAYER DIED FOR REAL!");
+            Destroy(gameObject);
+        }
+    }
 
     }
