@@ -211,7 +211,7 @@ public class SlimeEnemy : MonoBehaviour
         {
             animator.SetBool("isRunning", true);
         }
-        Debug.Log($"SlimeEnemy: Patrolling. Position: {transform.position.x}, MovingRight: {movingRight}");
+        // Debug.Log($"SlimeEnemy: Patrolling. Position: {transform.position.x}, MovingRight: {movingRight}");
         
         if (movingRight)
         {
