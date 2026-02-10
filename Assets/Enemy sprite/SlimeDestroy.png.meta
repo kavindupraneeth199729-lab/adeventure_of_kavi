@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: 40c39179cf18719498d18d9d4fff6c10
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3409715567863883920
+    second: SlimeDestroy_0
+  - first:
+      213: -320158647048010526
+    second: SlimeDestroy_1
+  - first:
+      213: 4380450753862431770
+    second: SlimeDestroy_2
+  - first:
+      213: 4515274307982637943
+    second: SlimeDestroy_3
+  - first:
+      213: 4651167678754599093
+    second: SlimeDestroy_4
+  - first:
+      213: 4272023603482932591
+    second: SlimeDestroy_5
+  - first:
+      213: 5867602316353865943
+    second: SlimeDestroy_6
+  - first:
+      213: -7535343418155225523
+    second: SlimeDestroy_7
+  - first:
+      213: 7271321175624663354
+    second: SlimeDestroy_8
+  - first:
+      213: -199045060623372817
+    second: SlimeDestroy_9
+  - first:
+      213: 2827856507532156668
+    second: SlimeDestroy_10
+  - first:
+      213: 820000786716500726
+    second: SlimeDestroy_11
+  - first:
+      213: 4451403955189590447
+    second: SlimeDestroy_12
+  - first:
+      213: -5055647144308789968
+    second: SlimeDestroy_13
+  - first:
+      213: 1605781629115943410
+    second: SlimeDestroy_14
+  - first:
+      213: -6960695947030792245
+    second: SlimeDestroy_15
+  - first:
+      213: -6280625857321597801
+    second: SlimeDestroy_16
+  - first:
+      213: 8192432863189223358
+    second: SlimeDestroy_17
+  - first:
+      213: 5579213741579041556
+    second: SlimeDestroy_18
+  - first:
+      213: -6520682599574781204
+    second: SlimeDestroy_19
+  - first:
+      213: -1913227181024714696
+    second: SlimeDestroy_20
+  - first:
+      213: 6960510083561642706
+    second: SlimeDestroy_21
+  - first:
+      213: 4749340165931205285
+    second: SlimeDestroy_22
+  - first:
+      213: 1907627416956395552
+    second: SlimeDestroy_23
+  - first:
+      213: -3762490483807240380
+    second: SlimeDestroy_24
+  - first:
+      213: -3015989888193972557
+    second: SlimeDestroy_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SlimeDestroy_0
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 12
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0779a58a1c14ea0d0800000000000000
+      internalID: -3409715567863883920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 14
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e40fe228619e8bf0800000000000000
+      internalID: -320158647048010526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_2
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 18
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14ff0480cc7acc30800000000000000
+      internalID: 4380450753862431770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_3
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 26
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77bb0c66f0a79ae30800000000000000
+      internalID: 4515274307982637943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_4
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 20
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b032f26c544c8040800000000000000
+      internalID: 4651167678754599093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 22
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f653fad45d6494b30800000000000000
+      internalID: 4272023603482932591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_6
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 32
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d808850839ed6150800000000000000
+      internalID: 5867602316353865943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_7
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 25
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4ea74cc5151d6790800000000000000
+      internalID: -7535343418155225523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_8
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 25
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3142e8851ce8e460800000000000000
+      internalID: 7271321175624663354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_9
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 29
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed6f3b6299dc3df0800000000000000
+      internalID: -199045060623372817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_10
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 25
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe1b3fc2809e3720800000000000000
+      internalID: 2827856507532156668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_11
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 30
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f227c7fe5a316b00800000000000000
+      internalID: 820000786716500726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_12
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa928dc005096cd30800000000000000
+      internalID: 4451403955189590447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_13
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 0
+        width: 44
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03da1cd45bbb6d9b0800000000000000
+      internalID: -5055647144308789968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_14
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 45
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f9cd4642e1e84610800000000000000
+      internalID: 1605781629115943410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_15
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 9
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc77abf5ae3a66f90800000000000000
+      internalID: -6960695947030792245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_16
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79486371f0cb6d8a0800000000000000
+      internalID: -6280625857321597801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_17
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 8
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb741a0a84e51b170800000000000000
+      internalID: 8192432863189223358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_18
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 0
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41bfbc886595d6d40800000000000000
+      internalID: 5579213741579041556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_19
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 0
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce2464749b1e185a0800000000000000
+      internalID: -6520682599574781204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_20
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 6
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 830666cf30ad275e0800000000000000
+      internalID: -1913227181024714696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_21
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 0
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da573aea03b89060800000000000000
+      internalID: 6960510083561642706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_22
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 0
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a203d3c7bb09e140800000000000000
+      internalID: 4749340165931205285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_23
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 0
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0206b775701497a10800000000000000
+      internalID: 1907627416956395552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_24
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 0
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44fb1e9e6d2f8cbc0800000000000000
+      internalID: -3762490483807240380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDestroy_25
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 0
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b637041d2d0526d0800000000000000
+      internalID: -3015989888193972557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 593dd764f5c494f4ab032a0ba7c8d133
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SlimeDestroy_0: -3409715567863883920
+      SlimeDestroy_1: -320158647048010526
+      SlimeDestroy_10: 2827856507532156668
+      SlimeDestroy_11: 820000786716500726
+      SlimeDestroy_12: 4451403955189590447
+      SlimeDestroy_13: -5055647144308789968
+      SlimeDestroy_14: 1605781629115943410
+      SlimeDestroy_15: -6960695947030792245
+      SlimeDestroy_16: -6280625857321597801
+      SlimeDestroy_17: 8192432863189223358
+      SlimeDestroy_18: 5579213741579041556
+      SlimeDestroy_19: -6520682599574781204
+      SlimeDestroy_2: 4380450753862431770
+      SlimeDestroy_20: -1913227181024714696
+      SlimeDestroy_21: 6960510083561642706
+      SlimeDestroy_22: 4749340165931205285
+      SlimeDestroy_23: 1907627416956395552
+      SlimeDestroy_24: -3762490483807240380
+      SlimeDestroy_25: -3015989888193972557
+      SlimeDestroy_3: 4515274307982637943
+      SlimeDestroy_4: 4651167678754599093
+      SlimeDestroy_5: 4272023603482932591
+      SlimeDestroy_6: 5867602316353865943
+      SlimeDestroy_7: -7535343418155225523
+      SlimeDestroy_8: 7271321175624663354
+      SlimeDestroy_9: -199045060623372817
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

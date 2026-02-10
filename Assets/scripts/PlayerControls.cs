@@ -67,6 +67,8 @@ private bool attack3Triggered = false;
 
     void Update()
     {
+        if (isDead) return;
+
         // Update horizontal velocity
         rb.linearVelocity = new Vector2(moveDirection * speed, rb.linearVelocity.y);
 
@@ -239,6 +241,9 @@ void FixedUpdate()
 
     public void TakeDamage(int damage)
     {
+        // Use local variable isDead to be safe
+        if (isDead) return; 
+
         currentHealth -= damage;
         Debug.Log("Player Took Damage! Current: " + currentHealth);
         
@@ -250,8 +255,57 @@ void FixedUpdate()
         if (currentHealth <= 0)
         {
             Debug.Log("PLAYER DIED FOR REAL!");
-            Destroy(gameObject);
+            Die();
+        }
+        else
+        {
+            Debug.Log("Triggering Hurt Animation");
+            animator.SetTrigger("Hurt"); 
         }
     }
 
+    private bool isDead = false;
+
+    void LateUpdate()
+    {
+        // --- VISIBILITY ENFORCEMENT ---
+        // Constantly force the Player to Z=0 and high Sorting Order
+        // This ensures they NEVER disappear behind the background or fall into the void visually.
+        Vector3 pos = transform.position;
+        pos.z = 0;
+        transform.position = pos;
+        
+        // Force high sorting order
+        if (GetComponent<SpriteRenderer>() != null)
+        {
+            GetComponent<SpriteRenderer>().sortingOrder = 10;
+        }
     }
+
+    private void Die()
+    {
+        if (isDead) return;
+        isDead = true;
+        
+        // Trigger both to ensure Animator catches it
+        animator.SetTrigger("Die");
+        animator.SetBool("isDead", true); 
+        
+        // Disable physics/input but KEEP VISIBLE (Script stays enabled for LateUpdate)
+        rb.linearVelocity = Vector2.zero;
+        rb.gravityScale = 0; 
+        rb.bodyType = RigidbodyType2D.Kinematic; 
+        
+        GetComponent<Collider2D>().enabled = false;
+        
+        Debug.Log("Player Died. Starting Destroy Timer.");
+        StartCoroutine(DestroyAfterAnimation());
+    }
+
+    IEnumerator DestroyAfterAnimation()
+    {
+        yield return new WaitForSeconds(2f); // Wait for animation
+        Debug.Log("Destroying Player Object now.");
+        Destroy(gameObject); // Actually destroy it
+    }
+}

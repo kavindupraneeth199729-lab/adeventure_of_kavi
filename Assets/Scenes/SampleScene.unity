@@ -876,7 +876,7 @@ MonoBehaviour:
   jumpForce: 10
   maxHealth: 20
   attackPoint: {fileID: 1066243132}
-  attackRange: 1
+  attackRange: 1.2
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -1035,7 +1035,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000041420427, y: 0.000000029802326, z: -1.234425e-16, w: 1}
-  m_LocalPosition: {x: 174.96153, y: 114.815506, z: -10}
+  m_LocalPosition: {x: 174.96252, y: 114.815506, z: -10}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3901,7 +3901,7 @@ Transform:
   m_GameObject: {fileID: 1471890206}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 174.96153, y: 114.815506, z: -10}
+  m_LocalPosition: {x: 174.96252, y: 114.815506, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4729,8 +4729,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SendPointerHoverToParent: 1
+  m_EventSystem: {fileID: 0}
+  m_InputOverride: {fileID: 0}
+  m_DefaultInput: {fileID: 0}
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
+  m_TrackedDeviceDragThresholdMultiplier: 2
   m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
