@@ -59,6 +59,9 @@ public class EnemyHealth : MonoBehaviour
              // Optional: Trigger specific hit reaction if script exists
              MushroomEnemy me = GetComponent<MushroomEnemy>();
              if (me != null) me.TakeDamageEffect();
+             
+             SlimeEnemy se = GetComponent<SlimeEnemy>();
+             if (se != null) se.TakeDamageEffect();
         }
     }
 
@@ -76,13 +79,21 @@ public class EnemyHealth : MonoBehaviour
             me.DieEffect();
             // Let animation finish before destroy? 
             // The DieEffect disables collisions, so we can destroy after some time.
-            Destroy(gameObject, 2f); 
+            Destroy(gameObject, 2f);
+            return;
         }
-        else
+        
+        SlimeEnemy se = GetComponent<SlimeEnemy>();
+        if (se != null)
         {
-            Debug.Log(gameObject.name + " destroyed!");
-            Destroy(gameObject);
+            se.DieEffect();
+            Destroy(gameObject, 2f);
+            return;
         }
+        
+        // Default: no custom enemy script
+        Debug.Log(gameObject.name + " destroyed!");
+        Destroy(gameObject);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
