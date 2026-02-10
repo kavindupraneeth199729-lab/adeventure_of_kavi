@@ -298,7 +298,14 @@ void FixedUpdate()
         
         GetComponent<Collider2D>().enabled = false;
         
-        Debug.Log("Player Died. Starting Destroy Timer.");
+        Debug.Log("Player Died. Showing Game Over.");
+        
+        // Show Game Over UI
+        if (GameOverManager.Instance != null)
+        {
+            GameOverManager.Instance.ShowGameOver();
+        }
+        
         StartCoroutine(DestroyAfterAnimation());
     }
 
