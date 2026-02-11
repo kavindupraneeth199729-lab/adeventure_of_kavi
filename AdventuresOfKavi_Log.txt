@@ -1,4 +1,4 @@
-Log Session Started: 2/11/2026 1:46:24 AM
+Log Session Started: 2/11/2026 12:50:12 PM
 
 [Log] File Logger initialized at: C:/Users/KIU/Adventures of Kavi/Assets\../AdventuresOfKavi_Log.txt
 [Log] --- NEW GAME SESSION STARTED ---
@@ -7,30 +7,196 @@ Log Session Started: 2/11/2026 1:46:24 AM
 [Log] GameInitializer: Initialization complete
 [Log] PauseMenuManager: Awake() called
 [Warning] PauseMenuManager: Duplicate instance destroyed
-[Log] SlimeEnemy: EnemyHealth AWAKE. Health forced to 15
-[Log] MushroomEnemy: EnemyHealth AWAKE. Health forced to 10
-[Log] dino_tri_thought_0: EnemyHealth AWAKE. Health forced to 10
+[Log] PauseMenuManager: Scene Loaded - SampleScene. Re-initializing UI.
+[Log] CreatePauseMenuUI: Starting UI creation
+[Log] CreatePauseMenuUI: Using existing Canvas: Canvas
+[Log] CreatePauseMenuUI: Created pause panel
+[Log] ControlEditor: Scene Loaded - SampleScene. Refreshing Control Layout.
+[Log] ControlEditor: FindAndSetupControlButtons() called
+[Log] ControlEditor: Found 19 total buttons in the scene
+[Log] Loaded custom settings for Button
+[Log] ControlEditor: -> Added DraggableButton to matchmaking button: Button
+[Log] ControlEditor: -> Registered button for editing: Button
+[Log] Loaded custom settings for Button (2)
+[Log] ControlEditor: -> Added DraggableButton to matchmaking button: Button (2)
+[Log] ControlEditor: -> Registered button for editing: Button (2)
+[Log] Loaded custom settings for Attack3
+[Log] ControlEditor: -> Added DraggableButton to matchmaking button: Attack3
+[Log] ControlEditor: -> Registered button for editing: Attack3
+[Log] Loaded custom settings for Attack2
+[Log] ControlEditor: -> Added DraggableButton to matchmaking button: Attack2
+[Log] ControlEditor: -> Registered button for editing: Attack2
+[Log] Loaded custom settings for Button (1)
+[Log] ControlEditor: -> Added DraggableButton to matchmaking button: Button (1)
+[Log] ControlEditor: -> Registered button for editing: Button (1)
+[Log] Loaded custom settings for Attack1
+[Log] ControlEditor: -> Added DraggableButton to matchmaking button: Attack1
+[Log] ControlEditor: -> Registered button for editing: Attack1
+[Log] Total control buttons found: 6
 [Log] ControlEditor: Start() - Auto-loading settings for all controls...
+[Log] ControlEditor: FindAndSetupControlButtons() called
+[Log] ControlEditor: Found 19 total buttons in the scene
+[Log] Total control buttons found: 6
+[Log] SlimeEnemy: Animator found and enabled. Controller: SlimeController
+[Log] SlimeEnemy: Snapped to Player Depth: -1
+[Log] SlimeEnemy STARTED: Pos=(222.00, 107.07, -1.00) | Order=100
+[Log] Added StandaloneInputModule to existing EventSystem.
+[Log] MushroomEnemy: Snapped to Player Depth: -1
+[Log] MushroomEnemy STARTED: Pos=(201.81, 107.66, -1.00) | Order=100
+[Log] DraggableButton on Button: Start() ready. isEditMode=False
+[Log] DraggableButton on Button (2): Start() ready. isEditMode=False
+[Log] DraggableButton on Attack3: Start() ready. isEditMode=False
+[Log] DraggableButton on Attack2: Start() ready. isEditMode=False
+[Log] DraggableButton on Button (1): Start() ready. isEditMode=False
+[Log] DraggableButton on Attack1: Start() ready. isEditMode=False
+[Log] EnemySpawner: [NUCLEAR SPAWN] Starting on 'platform_0 (2)'...
+[Log] Mushroom_Extra_1: Health reset to 10
+[Log] MushroomEnemy Mushroom_Extra_1: Fully RESET for spawning.
+[Log] MushroomEnemy Mushroom_Extra_1: Patrol center updated to 749.9266
+[Log] EnemySpawner: [SPAWN] Mushroom_Extra_1 at (749.93, 107.15, -1.00). Hierarchy: ROOT, Scale: (4.30, 5.30, 1.00)
+[Log] Mushroom_Extra_2: Health reset to 10
+[Log] MushroomEnemy Mushroom_Extra_2: Fully RESET for spawning.
+[Log] MushroomEnemy Mushroom_Extra_2: Patrol center updated to -1802.4
+[Log] EnemySpawner: [SPAWN] Mushroom_Extra_2 at (-1802.40, 107.15, -1.00). Hierarchy: ROOT, Scale: (4.30, 5.30, 1.00)
+[Log] Mushroom_Extra_3: Health reset to 10
+[Log] MushroomEnemy Mushroom_Extra_3: Fully RESET for spawning.
+[Log] MushroomEnemy Mushroom_Extra_3: Patrol center updated to -267.8499
+[Log] EnemySpawner: [SPAWN] Mushroom_Extra_3 at (-267.85, 107.15, -1.00). Hierarchy: ROOT, Scale: (4.30, 5.30, 1.00)
+[Log] Mushroom_Extra_4: Health reset to 10
+[Log] MushroomEnemy Mushroom_Extra_4: Fully RESET for spawning.
+[Log] MushroomEnemy Mushroom_Extra_4: Patrol center updated to -1207.723
+[Log] EnemySpawner: [SPAWN] Mushroom_Extra_4 at (-1207.72, 107.15, -1.00). Hierarchy: ROOT, Scale: (4.30, 5.30, 1.00)
+[Warning] HealthUI: Duplicate instance on SlimeEnemy(Clone) destroyed. Keeping existing instance on SlimeEnemy
+[Log] Slime_Extra_1: Health reset to 15
+[Log] SlimeEnemy Slime_Extra_1: Fully RESET for spawning.
+[Log] SlimeEnemy Slime_Extra_1: Patrol center updated to -722.5868
+[Log] EnemySpawner: [SPAWN] Slime_Extra_1 at (-722.59, 107.15, -1.00). Hierarchy: ROOT, Scale: (3.76, 2.89, 1.00)
+[Warning] HealthUI: Duplicate instance on SlimeEnemy(Clone) destroyed. Keeping existing instance on SlimeEnemy
+[Log] Slime_Extra_2: Health reset to 15
+[Log] SlimeEnemy Slime_Extra_2: Fully RESET for spawning.
+[Log] SlimeEnemy Slime_Extra_2: Patrol center updated to 575.3524
+[Log] EnemySpawner: [SPAWN] Slime_Extra_2 at (575.35, 107.15, -1.00). Hierarchy: ROOT, Scale: (3.76, 2.89, 1.00)
+[Warning] HealthUI: Duplicate instance on SlimeEnemy(Clone) destroyed. Keeping existing instance on SlimeEnemy
+[Log] Slime_Extra_3: Health reset to 15
+[Log] SlimeEnemy Slime_Extra_3: Fully RESET for spawning.
+[Log] SlimeEnemy Slime_Extra_3: Patrol center updated to -331.1526
+[Log] EnemySpawner: [SPAWN] Slime_Extra_3 at (-331.15, 107.15, -1.00). Hierarchy: ROOT, Scale: (3.76, 2.89, 1.00)
+[Log] EnemySpawner: Template Slime Active=True, ScriptEnabled=True
+[Warning] HealthUI: Duplicate instance on SlimeEnemy(Clone) destroyed. Keeping existing instance on SlimeEnemy
+[Log] Test_Slime_Extra_0: Health reset to 15
+[Log] SlimeEnemy Test_Slime_Extra_0: Fully RESET for spawning.
+[Log] SlimeEnemy Test_Slime_Extra_0: Patrol center updated to 177
+[Log] EnemySpawner: [SPAWN] Test_Slime_Extra_0 at (177.00, 107.15, -1.00). Hierarchy: ROOT, Scale: (3.76, 2.89, 1.00)
+[Log] MushroomEnemy: Snapped to Player Depth: -1
+[Log] MushroomEnemy STARTED: Pos=(749.93, 107.15, -1.00) | Order=100
+[Log] MushroomEnemy: Snapped to Player Depth: -1
+[Log] MushroomEnemy STARTED: Pos=(-1802.40, 107.15, -1.00) | Order=100
+[Log] MushroomEnemy: Snapped to Player Depth: -1
+[Log] MushroomEnemy STARTED: Pos=(-267.85, 107.15, -1.00) | Order=100
+[Log] MushroomEnemy: Snapped to Player Depth: -1
+[Log] MushroomEnemy STARTED: Pos=(-1207.72, 107.15, -1.00) | Order=100
+[Log] SlimeEnemy: Animator found and enabled. Controller: SlimeController
+[Log] SlimeEnemy: Snapped to Player Depth: -1
+[Log] SlimeEnemy STARTED: Pos=(-722.59, 107.15, -1.00) | Order=100
+[Log] SlimeEnemy: Animator found and enabled. Controller: SlimeController
+[Log] SlimeEnemy: Snapped to Player Depth: -1
+[Log] SlimeEnemy STARTED: Pos=(575.35, 107.15, -1.00) | Order=100
+[Log] SlimeEnemy: Animator found and enabled. Controller: SlimeController
+[Log] SlimeEnemy: Snapped to Player Depth: -1
+[Log] SlimeEnemy STARTED: Pos=(-331.15, 107.15, -1.00) | Order=100
+[Log] SlimeEnemy: Animator found and enabled. Controller: SlimeController
+[Log] SlimeEnemy: Snapped to Player Depth: -1
+[Log] SlimeEnemy STARTED: Pos=(177.00, 107.15, -1.00) | Order=100
+[Log] SlimeEnemy: Attacking!
+[Log] Player Took Damage! Current: 19
+[Log] Triggering Hurt Animation
+[Log] Dino attacked Player!
+[Log] Player Took Damage! Current: 18
+[Log] Triggering Hurt Animation
+[Log] Dino attacked Player!
+[Log] Player Took Damage! Current: 17
+[Log] Triggering Hurt Animation
+[Log] Dino attacked Player!
+[Log] Player Took Damage! Current: 16
+[Log] Triggering Hurt Animation
+[Log] Dino attacked Player!
+[Log] Player Took Damage! Current: 15
+[Log] Triggering Hurt Animation
+[Log] Dino attacked Player!
+[Log] SlimeEnemy: Attacking!
+[Log] Player Took Damage! Current: 14
+[Log] Triggering Hurt Animation
+[Log] SlimeEnemy: Attacking!
+[Log] Player Took Damage! Current: 13
+[Log] Triggering Hurt Animation
+[Log] SlimeEnemy: Attacking!
+[Log] Player Took Damage! Current: 12
+[Log] Triggering Hurt Animation
+[Log] SlimeEnemy: Attacking!
+[Log] Player Took Damage! Current: 11
+[Log] Triggering Hurt Animation
+[Log] SlimeEnemy: Attacking!
+[Log] Player Took Damage! Current: 10
+[Log] Triggering Hurt Animation
+[Log] SlimeEnemy: Attacking!
+[Log] Player Took Damage! Current: 9
+[Log] Triggering Hurt Animation
+[Log] Player Took Damage! Current: 8
+[Log] Triggering Hurt Animation
+[Log] Player Took Damage! Current: 7
+[Log] Triggering Hurt Animation
+[Log] Dino attacked Player!
+[Log] SlimeEnemy: Attacking!
+[Log] Player Took Damage! Current: 6
+[Log] Triggering Hurt Animation
+[Log] Player Took Damage! Current: 5
+[Log] Triggering Hurt Animation
+[Log] Player Took Damage! Current: 4
+[Log] Triggering Hurt Animation
+[Log] Dino attacked Player!
+[Log] SlimeEnemy: Attacking!
+[Log] Player Took Damage! Current: 3
+[Log] Triggering Hurt Animation
+[Log] Dino attacked Player!
+[Log] Player Took Damage! Current: 2
+[Log] Triggering Hurt Animation
+[Log] Player Took Damage! Current: 1
+[Log] Triggering Hurt Animation
+[Log] Player Took Damage! Current: 0
+[Log] PLAYER DIED FOR REAL!
+[Log] Player Died. Showing Game Over.
+[Log] GameOverManager: Showing Game Over screen
+[Log] Dino attacked Player!
+[Log] GameInitializer: Starting initialization
+[Log] GameInitializer: Created GameOverManager
+[Log] GameInitializer: Initialization complete
+[Log] PauseMenuManager: Awake() called
+[Warning] PauseMenuManager: Duplicate instance destroyed
+[Log] PauseMenuManager: Scene Loaded - SampleScene. Re-initializing UI.
+[Log] CreatePauseMenuUI: Starting UI creation
+[Log] CreatePauseMenuUI: Using existing Canvas: Canvas
+[Log] CreatePauseMenuUI: Created pause panel
+[Log] ControlEditor: Scene Loaded - SampleScene. Refreshing Control Layout.
 [Log] ControlEditor: FindAndSetupControlButtons() called
 [Log] ControlEditor: Found 14 total buttons in the scene
 [Log] Loaded custom settings for Button (2)
 [Log] ControlEditor: -> Added DraggableButton to matchmaking button: Button (2)
 [Log] ControlEditor: -> Registered button for editing: Button (2)
-[Log] Loaded custom settings for Attack2
-[Log] ControlEditor: -> Added DraggableButton to matchmaking button: Attack2
-[Log] ControlEditor: -> Registered button for editing: Attack2
-[Log] Loaded custom settings for Attack1
-[Log] ControlEditor: -> Added DraggableButton to matchmaking button: Attack1
-[Log] ControlEditor: -> Registered button for editing: Attack1
-[Log] Loaded custom settings for Button (1)
-[Log] ControlEditor: -> Added DraggableButton to matchmaking button: Button (1)
-[Log] ControlEditor: -> Registered button for editing: Button (1)
 [Log] Loaded custom settings for Button
 [Log] ControlEditor: -> Added DraggableButton to matchmaking button: Button
 [Log] ControlEditor: -> Registered button for editing: Button
+[Log] Loaded custom settings for Button (1)
+[Log] ControlEditor: -> Added DraggableButton to matchmaking button: Button (1)
+[Log] ControlEditor: -> Registered button for editing: Button (1)
+[Log] Loaded custom settings for Attack2
+[Log] ControlEditor: -> Added DraggableButton to matchmaking button: Attack2
+[Log] ControlEditor: -> Registered button for editing: Attack2
 [Log] Loaded custom settings for Attack3
 [Log] ControlEditor: -> Added DraggableButton to matchmaking button: Attack3
 [Log] ControlEditor: -> Registered button for editing: Attack3
+[Log] Loaded custom settings for Attack1
+[Log] ControlEditor: -> Added DraggableButton to matchmaking button: Attack1
+[Log] ControlEditor: -> Registered button for editing: Attack1
 [Log] Total control buttons found: 6
 [Log] SlimeEnemy: Animator found and enabled. Controller: SlimeController
 [Log] SlimeEnemy: Snapped to Player Depth: -1
@@ -39,155 +205,78 @@ Log Session Started: 2/11/2026 1:46:24 AM
 [Log] MushroomEnemy: Snapped to Player Depth: -1
 [Log] MushroomEnemy STARTED: Pos=(201.81, 107.66, -1.00) | Order=100
 [Log] DraggableButton on Button (2): Start() ready. isEditMode=False
-[Log] DraggableButton on Attack2: Start() ready. isEditMode=False
-[Log] DraggableButton on Attack1: Start() ready. isEditMode=False
-[Log] DraggableButton on Button (1): Start() ready. isEditMode=False
 [Log] DraggableButton on Button: Start() ready. isEditMode=False
+[Log] DraggableButton on Button (1): Start() ready. isEditMode=False
+[Log] DraggableButton on Attack2: Start() ready. isEditMode=False
 [Log] DraggableButton on Attack3: Start() ready. isEditMode=False
-[Log] [HEARTBEAT] Slime SlimeEnemy (Active=True, Dead=False, Enabled=True) at (222.00, 107.07, -1.00)
-[Log] [HEARTBEAT] Mushroom MushroomEnemy (Active=True, Dead=False, Enabled=True) at (201.81, 107.66, -1.00)
+[Log] DraggableButton on Attack1: Start() ready. isEditMode=False
 [Log] EnemySpawner: [NUCLEAR SPAWN] Starting on 'platform_0 (2)'...
-[Log] MushroomEnemy(Clone): EnemyHealth AWAKE. Health forced to 10
 [Log] Mushroom_Extra_1: Health reset to 10
 [Log] MushroomEnemy Mushroom_Extra_1: Fully RESET for spawning.
-[Log] MushroomEnemy Mushroom_Extra_1: Patrol center updated to 1419.353
-[Log] EnemySpawner: [SPAWN] Mushroom_Extra_1 at (1419.35, 107.15, -1.00). Hierarchy: ROOT, Scale: (4.30, 5.30, 1.00)
-[Log] MushroomEnemy(Clone): EnemyHealth AWAKE. Health forced to 10
+[Log] MushroomEnemy Mushroom_Extra_1: Patrol center updated to -1854.324
+[Log] EnemySpawner: [SPAWN] Mushroom_Extra_1 at (-1854.32, 107.15, -1.00). Hierarchy: ROOT, Scale: (4.30, 5.30, 1.00)
 [Log] Mushroom_Extra_2: Health reset to 10
 [Log] MushroomEnemy Mushroom_Extra_2: Fully RESET for spawning.
-[Log] MushroomEnemy Mushroom_Extra_2: Patrol center updated to -421.5922
-[Log] EnemySpawner: [SPAWN] Mushroom_Extra_2 at (-421.59, 107.15, -1.00). Hierarchy: ROOT, Scale: (4.30, 5.30, 1.00)
-[Log] MushroomEnemy(Clone): EnemyHealth AWAKE. Health forced to 10
+[Log] MushroomEnemy Mushroom_Extra_2: Patrol center updated to 1070.177
+[Log] EnemySpawner: [SPAWN] Mushroom_Extra_2 at (1070.18, 107.15, -1.00). Hierarchy: ROOT, Scale: (4.30, 5.30, 1.00)
 [Log] Mushroom_Extra_3: Health reset to 10
 [Log] MushroomEnemy Mushroom_Extra_3: Fully RESET for spawning.
-[Log] MushroomEnemy Mushroom_Extra_3: Patrol center updated to -1653.717
-[Log] EnemySpawner: [SPAWN] Mushroom_Extra_3 at (-1653.72, 107.15, -1.00). Hierarchy: ROOT, Scale: (4.30, 5.30, 1.00)
-[Log] MushroomEnemy(Clone): EnemyHealth AWAKE. Health forced to 10
+[Log] MushroomEnemy Mushroom_Extra_3: Patrol center updated to 2199.533
+[Log] EnemySpawner: [SPAWN] Mushroom_Extra_3 at (2199.53, 107.15, -1.00). Hierarchy: ROOT, Scale: (4.30, 5.30, 1.00)
 [Log] Mushroom_Extra_4: Health reset to 10
 [Log] MushroomEnemy Mushroom_Extra_4: Fully RESET for spawning.
-[Log] MushroomEnemy Mushroom_Extra_4: Patrol center updated to -545.4955
-[Log] EnemySpawner: [SPAWN] Mushroom_Extra_4 at (-545.50, 107.15, -1.00). Hierarchy: ROOT, Scale: (4.30, 5.30, 1.00)
+[Log] MushroomEnemy Mushroom_Extra_4: Patrol center updated to 2122.081
+[Log] EnemySpawner: [SPAWN] Mushroom_Extra_4 at (2122.08, 107.15, -1.00). Hierarchy: ROOT, Scale: (4.30, 5.30, 1.00)
 [Warning] HealthUI: Duplicate instance on SlimeEnemy(Clone) destroyed. Keeping existing instance on SlimeEnemy
-[Log] SlimeEnemy(Clone): EnemyHealth AWAKE. Health forced to 15
 [Log] Slime_Extra_1: Health reset to 15
 [Log] SlimeEnemy Slime_Extra_1: Fully RESET for spawning.
-[Log] SlimeEnemy Slime_Extra_1: Patrol center updated to -574.9678
-[Log] EnemySpawner: [SPAWN] Slime_Extra_1 at (-574.97, 107.15, -1.00). Hierarchy: ROOT, Scale: (3.76, 2.89, 1.00)
+[Log] SlimeEnemy Slime_Extra_1: Patrol center updated to 1966.679
+[Log] EnemySpawner: [SPAWN] Slime_Extra_1 at (1966.68, 107.15, -1.00). Hierarchy: ROOT, Scale: (3.76, 2.89, 1.00)
 [Warning] HealthUI: Duplicate instance on SlimeEnemy(Clone) destroyed. Keeping existing instance on SlimeEnemy
-[Log] SlimeEnemy(Clone): EnemyHealth AWAKE. Health forced to 15
 [Log] Slime_Extra_2: Health reset to 15
 [Log] SlimeEnemy Slime_Extra_2: Fully RESET for spawning.
-[Log] SlimeEnemy Slime_Extra_2: Patrol center updated to 638.6447
-[Log] EnemySpawner: [SPAWN] Slime_Extra_2 at (638.64, 107.15, -1.00). Hierarchy: ROOT, Scale: (3.76, 2.89, 1.00)
+[Log] SlimeEnemy Slime_Extra_2: Patrol center updated to -243.4178
+[Log] EnemySpawner: [SPAWN] Slime_Extra_2 at (-243.42, 107.15, -1.00). Hierarchy: ROOT, Scale: (3.76, 2.89, 1.00)
 [Warning] HealthUI: Duplicate instance on SlimeEnemy(Clone) destroyed. Keeping existing instance on SlimeEnemy
-[Log] SlimeEnemy(Clone): EnemyHealth AWAKE. Health forced to 15
 [Log] Slime_Extra_3: Health reset to 15
 [Log] SlimeEnemy Slime_Extra_3: Fully RESET for spawning.
-[Log] SlimeEnemy Slime_Extra_3: Patrol center updated to 929.9721
-[Log] EnemySpawner: [SPAWN] Slime_Extra_3 at (929.97, 107.15, -1.00). Hierarchy: ROOT, Scale: (3.76, 2.89, 1.00)
+[Log] SlimeEnemy Slime_Extra_3: Patrol center updated to 2069.429
+[Log] EnemySpawner: [SPAWN] Slime_Extra_3 at (2069.43, 107.15, -1.00). Hierarchy: ROOT, Scale: (3.76, 2.89, 1.00)
 [Log] EnemySpawner: Template Slime Active=True, ScriptEnabled=True
 [Warning] HealthUI: Duplicate instance on SlimeEnemy(Clone) destroyed. Keeping existing instance on SlimeEnemy
-[Log] SlimeEnemy(Clone): EnemyHealth AWAKE. Health forced to 15
 [Log] Test_Slime_Extra_0: Health reset to 15
 [Log] SlimeEnemy Test_Slime_Extra_0: Fully RESET for spawning.
 [Log] SlimeEnemy Test_Slime_Extra_0: Patrol center updated to 177
 [Log] EnemySpawner: [SPAWN] Test_Slime_Extra_0 at (177.00, 107.15, -1.00). Hierarchy: ROOT, Scale: (3.76, 2.89, 1.00)
 [Log] MushroomEnemy: Snapped to Player Depth: -1
-[Log] MushroomEnemy STARTED: Pos=(1419.35, 107.15, -1.00) | Order=100
+[Log] MushroomEnemy STARTED: Pos=(-1854.32, 107.15, -1.00) | Order=100
 [Log] MushroomEnemy: Snapped to Player Depth: -1
-[Log] MushroomEnemy STARTED: Pos=(-421.59, 107.15, -1.00) | Order=100
+[Log] MushroomEnemy STARTED: Pos=(1070.18, 107.15, -1.00) | Order=100
 [Log] MushroomEnemy: Snapped to Player Depth: -1
-[Log] MushroomEnemy STARTED: Pos=(-1653.72, 107.15, -1.00) | Order=100
+[Log] MushroomEnemy STARTED: Pos=(2199.53, 107.15, -1.00) | Order=100
 [Log] MushroomEnemy: Snapped to Player Depth: -1
-[Log] MushroomEnemy STARTED: Pos=(-545.50, 107.15, -1.00) | Order=100
+[Log] MushroomEnemy STARTED: Pos=(2122.08, 107.15, -1.00) | Order=100
 [Log] SlimeEnemy: Animator found and enabled. Controller: SlimeController
 [Log] SlimeEnemy: Snapped to Player Depth: -1
-[Log] SlimeEnemy STARTED: Pos=(-574.97, 107.15, -1.00) | Order=100
+[Log] SlimeEnemy STARTED: Pos=(1966.68, 107.15, -1.00) | Order=100
 [Log] SlimeEnemy: Animator found and enabled. Controller: SlimeController
 [Log] SlimeEnemy: Snapped to Player Depth: -1
-[Log] SlimeEnemy STARTED: Pos=(638.64, 107.15, -1.00) | Order=100
+[Log] SlimeEnemy STARTED: Pos=(-243.42, 107.15, -1.00) | Order=100
 [Log] SlimeEnemy: Animator found and enabled. Controller: SlimeController
 [Log] SlimeEnemy: Snapped to Player Depth: -1
-[Log] SlimeEnemy STARTED: Pos=(929.97, 107.15, -1.00) | Order=100
+[Log] SlimeEnemy STARTED: Pos=(2069.43, 107.15, -1.00) | Order=100
 [Log] SlimeEnemy: Animator found and enabled. Controller: SlimeController
 [Log] SlimeEnemy: Snapped to Player Depth: -1
 [Log] SlimeEnemy STARTED: Pos=(177.00, 107.15, -1.00) | Order=100
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_1 (Active=True, Dead=False, Enabled=True) at (1419.35, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_2 (Active=True, Dead=False, Enabled=True) at (-421.59, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_3 (Active=True, Dead=False, Enabled=True) at (-1653.72, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_4 (Active=True, Dead=False, Enabled=True) at (-545.50, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_1 (Active=True, Dead=False, Enabled=True) at (-574.97, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_2 (Active=True, Dead=False, Enabled=True) at (638.64, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_3 (Active=True, Dead=False, Enabled=True) at (929.97, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Test_Slime_Extra_0 (Active=True, Dead=False, Enabled=True) at (177.00, 107.15, -1.00)
 [Log] SlimeEnemy: Attacking!
 [Log] Player Took Damage! Current: 19
 [Log] Triggering Hurt Animation
+[Log] SlimeEnemy: Attacking!
 [Log] Player Took Damage! Current: 18
 [Log] Triggering Hurt Animation
-[Log] Dino attacked Player!
+[Log] SlimeEnemy: Attacking!
 [Log] Player Took Damage! Current: 17
 [Log] Triggering Hurt Animation
-[Log] [HEARTBEAT] Slime SlimeEnemy (Active=True, Dead=False, Enabled=True) at (220.01, 107.07, 0.00)
-[Log] [HEARTBEAT] Mushroom MushroomEnemy (Active=True, Dead=False, Enabled=True) at (202.37, 107.66, 0.00)
 [Log] SlimeEnemy: Attacking!
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_1 (Active=True, Dead=False, Enabled=True) at (1417.14, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_2 (Active=True, Dead=False, Enabled=True) at (-423.81, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_3 (Active=True, Dead=False, Enabled=True) at (-1655.93, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_4 (Active=True, Dead=False, Enabled=True) at (-547.71, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_1 (Active=True, Dead=False, Enabled=True) at (-577.19, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_2 (Active=True, Dead=False, Enabled=True) at (636.43, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_3 (Active=True, Dead=False, Enabled=True) at (927.75, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Test_Slime_Extra_0 (Active=True, Dead=False, Enabled=True) at (178.45, 107.15, 0.00)
 [Log] Player Took Damage! Current: 16
 [Log] Triggering Hurt Animation
-[Log] [HEARTBEAT] Slime SlimeEnemy (Active=True, Dead=False, Enabled=True) at (223.79, 107.07, 0.00)
-[Log] [HEARTBEAT] Mushroom MushroomEnemy (Active=True, Dead=False, Enabled=True) at (203.23, 107.66, 0.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_1 (Active=True, Dead=False, Enabled=True) at (1421.16, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_2 (Active=True, Dead=False, Enabled=True) at (-419.79, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_3 (Active=True, Dead=False, Enabled=True) at (-1651.91, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_4 (Active=True, Dead=False, Enabled=True) at (-543.69, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_1 (Active=True, Dead=False, Enabled=True) at (-573.16, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_2 (Active=True, Dead=False, Enabled=True) at (640.45, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_3 (Active=True, Dead=False, Enabled=True) at (931.78, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Test_Slime_Extra_0 (Active=True, Dead=False, Enabled=True) at (177.54, 107.15, 0.00)
-[Log] [HEARTBEAT] Slime SlimeEnemy (Active=True, Dead=False, Enabled=True) at (222.18, 107.07, 0.00)
-[Log] [HEARTBEAT] Mushroom MushroomEnemy (Active=True, Dead=False, Enabled=True) at (199.21, 107.66, 0.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_1 (Active=True, Dead=False, Enabled=True) at (1419.52, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_2 (Active=True, Dead=False, Enabled=True) at (-421.42, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_3 (Active=True, Dead=False, Enabled=True) at (-1653.55, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_4 (Active=True, Dead=False, Enabled=True) at (-545.31, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_1 (Active=True, Dead=False, Enabled=True) at (-574.78, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_2 (Active=True, Dead=False, Enabled=True) at (638.83, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_3 (Active=True, Dead=False, Enabled=True) at (930.16, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Test_Slime_Extra_0 (Active=True, Dead=False, Enabled=True) at (174.49, 107.15, 0.00)
-[Log] [HEARTBEAT] Slime SlimeEnemy (Active=True, Dead=False, Enabled=True) at (219.86, 107.07, 0.00)
-[Log] [HEARTBEAT] Mushroom MushroomEnemy (Active=True, Dead=False, Enabled=True) at (202.44, 107.66, 0.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_1 (Active=True, Dead=False, Enabled=True) at (1417.23, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_2 (Active=True, Dead=False, Enabled=True) at (-423.72, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_3 (Active=True, Dead=False, Enabled=True) at (-1655.84, 107.15, -1.00)
-[Log] [HEARTBEAT] Mushroom Mushroom_Extra_4 (Active=True, Dead=False, Enabled=True) at (-547.66, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_1 (Active=True, Dead=False, Enabled=True) at (-577.13, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_2 (Active=True, Dead=False, Enabled=True) at (636.48, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Slime_Extra_3 (Active=True, Dead=False, Enabled=True) at (927.81, 107.15, -1.00)
-[Log] [HEARTBEAT] Slime Test_Slime_Extra_0 (Active=True, Dead=False, Enabled=True) at (178.51, 107.15, 0.00)
-[Log] [LIFE] Mushroom MushroomEnemy was DISABLED at (202.47, 107.66, 0.00)
-[Log] [LIFE] Mushroom MushroomEnemy was DESTROYED at (202.47, 107.66, 0.00)
-[Log] [LIFE] Slime Slime_Extra_3 was DISABLED at (932.18, 107.15, -1.00). Trace:   at System.Environment.get_StackTrace () [0x00000] in <ed969b0e627d471da4848289f9c322df>:0 
-  at SlimeEnemy.OnDisable () [0x00000] in C:\Users\KIU\Adventures of Kavi\Assets\scripts\SlimeEnemy.cs:102 
-[Log] [LIFE] Slime Slime_Extra_3 was DESTROYED at (932.18, 107.15, -1.00). Trace:   at System.Environment.get_StackTrace () [0x00000] in <ed969b0e627d471da4848289f9c322df>:0 
-  at SlimeEnemy.OnDestroy () [0x00000] in C:\Users\KIU\Adventures of Kavi\Assets\scripts\SlimeEnemy.cs:103 
-[Log] [LIFE] Mushroom Mushroom_Extra_1 was DISABLED at (1421.53, 107.15, -1.00)
-[Log] [LIFE] Mushroom Mushroom_Extra_1 was DESTROYED at (1421.53, 107.15, -1.00)
-[Log] [LIFE] Mushroom Mushroom_Extra_3 was DISABLED at (-1651.55, 107.15, -1.00)
-[Log] [LIFE] Mushroom Mushroom_Extra_3 was DESTROYED at (-1651.55, 107.15, -1.00)
-[Log] [LIFE] Mushroom Mushroom_Extra_2 was DISABLED at (-419.42, 107.15, -1.00)
-[Log] [LIFE] Mushroom Mushroom_Extra_2 was DESTROYED at (-419.42, 107.15, -1.00)
-[Log] [LIFE] Slime Slime_Extra_2 was DISABLED at (640.85, 107.15, -1.00). Trace:   at System.Environment.get_StackTrace () [0x00000] in <ed969b0e627d471da4848289f9c322df>:0 
-  at SlimeEnemy.OnDisable () [0x00000] in C:\Users\KIU\Adventures of Kavi\Assets\scripts\SlimeEnemy.cs:102 
-[Log] [LIFE] Slime Slime_Extra_2 was DESTROYED at (640.85, 107.15, -1.00). Trace:   at System.Environment.get_StackTrace () [0x00000] in <ed969b0e627d471da4848289f9c322df>:0 
-  at SlimeEnemy.OnDestroy () [0x00000] in C:\Users\KIU\Adventures of Kavi\Assets\scripts\SlimeEnemy.cs:103 
-[Log] [LIFE] Slime SlimeEnemy was DISABLED at (224.60, 107.07, 0.00). Trace:   at System.Environment.get_StackTrace () [0x00000] in <ed969b0e627d471da4848289f9c322df>:0 
-  at SlimeEnemy.OnDisable () [0x00000] in C:\Users\KIU\Adventures of Kavi\Assets\scripts\SlimeEnemy.cs:102 
-[Log] [LIFE] Slime SlimeEnemy was DESTROYED at (224.60, 107.07, 0.00). Trace:   at System.Environment.get_StackTrace () [0x00000] in <ed969b0e627d471da4848289f9c322df>:0 
-  at SlimeEnemy.OnDestroy () [0x00000] in C:\Users\KIU\Adventures of Kavi\Assets\scripts\SlimeEnemy.cs:103 

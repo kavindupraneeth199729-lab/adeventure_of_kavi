@@ -89,19 +89,8 @@ public class MushroomEnemy : MonoBehaviour
 
 
         
-    private void OnDisable() { Debug.Log($"[LIFE] Mushroom {gameObject.name} was DISABLED at {transform.position}"); }
-    private void OnDestroy() { Debug.Log($"[LIFE] Mushroom {gameObject.name} was DESTROYED at {transform.position}"); }
-
-    private float lastHeartbeatTime = -99f; 
     void Update()
     {
-        // 1. Heartbeat FIRST (Diagnostic only)
-        if (Time.time > lastHeartbeatTime + 10f)
-        {
-            lastHeartbeatTime = Time.time;
-            Debug.Log($"[HEARTBEAT] Mushroom {gameObject.name} (Active={gameObject.activeInHierarchy}, Dead={isDead}, Enabled={this.enabled}) at {transform.position}");
-        }
-
         if (isDead) return;
         
         // Find player if not found

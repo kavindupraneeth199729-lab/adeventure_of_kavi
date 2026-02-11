@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuManager : MonoBehaviour
 {
@@ -13,6 +14,34 @@ public class PauseMenuManager : MonoBehaviour
     
     private bool isPaused = false;
     
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log($"PauseMenuManager: Scene Loaded - {scene.name}. Re-initializing UI.");
+        // Close menu on load
+        isPaused = false;
+        Time.timeScale = 1f;
+        
+        // Re-setup UI
+        CreatePauseMenuUI();
+        
+        // Setup listeners
+        if (settingsButton != null)
+        {
+            settingsButton.onClick.RemoveAllListeners();
+            settingsButton.onClick.AddListener(TogglePause);
+        }
+    }
+
     void Awake()
     {
         Debug.Log("PauseMenuManager: Awake() called");
@@ -142,6 +171,18 @@ public class PauseMenuManager : MonoBehaviour
         panelRect.offsetMin = Vector2.zero;
         panelRect.offsetMax = Vector2.zero;
         
+        // Ensure buttons are hooked up
+        if (resumeButton != null)
+        {
+            resumeButton.onClick.RemoveAllListeners();
+            resumeButton.onClick.AddListener(Resume);
+        }
+        if (editControlsButton != null)
+        {
+            editControlsButton.onClick.RemoveAllListeners();
+            editControlsButton.onClick.AddListener(OpenControlEditor);
+        }
+
         pauseMenuPanel = panel;
         
         Debug.Log("CreatePauseMenuUI: Created pause panel");

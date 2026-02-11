@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -18,6 +19,32 @@ public class ControlEditor : MonoBehaviour
     private List<DraggableButton> controlButtons = new List<DraggableButton>();
     private bool _isEditMode = false; // Internal flag for Update loop diagnostics
     
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        Application.logMessageReceived -= HandleLog;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log($"ControlEditor: Scene Loaded - {scene.name}. Refreshing Control Layout.");
+        
+        // 1. Reset state
+        _isEditMode = false;
+        controlButtons.Clear();
+        
+        // 2. Re-create UI
+        CreateEditModeUI();
+        
+        // 3. Re-find and setup buttons in new scene
+        FindAndSetupControlButtons();
+    }
+
     void Awake()
     {
         // Singleton pattern
@@ -68,7 +95,7 @@ public class ControlEditor : MonoBehaviour
 
     void OnDestroy()
     {
-        Application.logMessageReceived -= HandleLog;
+        // Handled in OnDisable for better subscription management
     }
 
     void HandleLog(string logString, string stackTrace, LogType type)

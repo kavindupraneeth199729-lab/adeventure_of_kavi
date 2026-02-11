@@ -99,19 +99,9 @@ public class SlimeEnemy : MonoBehaviour
 
 
         
-    private void OnDisable() { Debug.Log($"[LIFE] Slime {gameObject.name} was DISABLED at {transform.position}. Trace: {System.Environment.StackTrace}"); }
-    private void OnDestroy() { Debug.Log($"[LIFE] Slime {gameObject.name} was DESTROYED at {transform.position}. Trace: {System.Environment.StackTrace}"); }
-
     private float lastHeartbeatTime = -99f; 
     void Update()
     {
-        // 1. Heartbeat FIRST (Diagnostic only)
-        if (Time.time > lastHeartbeatTime + 10f)
-        {
-            lastHeartbeatTime = Time.time;
-            Debug.Log($"[HEARTBEAT] Slime {gameObject.name} (Active={gameObject.activeInHierarchy}, Dead={isDead}, Enabled={this.enabled}) at {transform.position}");
-        }
-
         if (isDead) return;
         
         if (player == null)
