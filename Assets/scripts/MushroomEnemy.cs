@@ -89,8 +89,19 @@ public class MushroomEnemy : MonoBehaviour
 
 
         
+    private void OnDisable() { Debug.Log($"[LIFE] Mushroom {gameObject.name} was DISABLED at {transform.position}"); }
+    private void OnDestroy() { Debug.Log($"[LIFE] Mushroom {gameObject.name} was DESTROYED at {transform.position}"); }
+
+    private float lastHeartbeatTime = -99f; 
     void Update()
     {
+        // 1. Heartbeat FIRST (Diagnostic only)
+        if (Time.time > lastHeartbeatTime + 10f)
+        {
+            lastHeartbeatTime = Time.time;
+            Debug.Log($"[HEARTBEAT] Mushroom {gameObject.name} (Active={gameObject.activeInHierarchy}, Dead={isDead}, Enabled={this.enabled}) at {transform.position}");
+        }
+
         if (isDead) return;
         
         // Find player if not found
@@ -100,21 +111,17 @@ public class MushroomEnemy : MonoBehaviour
             if (p != null) player = p.transform;
         }
         
-        if (player == null) return; // Still no player, do nothing
-        
-        if (player == null) return; // Still no player, do nothing
+        if (player == null) return; 
         
         // --- RESTORED COPYCAT LOGIC (VISIBILITY KEEPER) ---
-        // You said this worked, so I am bringing it back!
-        // We find the "Dino" and copy his Rendering Settings ONLY.
-        if (Time.frameCount % 10 == 0) // Check frequently
+        // Keeps sorting in sync but DOES NOT touch Z
+        if (Time.frameCount % 20 == 0) // Check frequently
         {
             EnemyHealth[] allEnemies = FindObjectsOfType<EnemyHealth>();
             foreach (var e in allEnemies)
             {
                 if (e.gameObject != this.gameObject && e.name.ToLower().Contains("dino"))
                 {
-                    // Found a Dino! Copy it!
                     SpriteRenderer theirSR = e.GetComponent<SpriteRenderer>();
                     SpriteRenderer mySR = GetComponent<SpriteRenderer>();
                     
@@ -122,13 +129,8 @@ public class MushroomEnemy : MonoBehaviour
                     {
                          mySR.sortingLayerID = theirSR.sortingLayerID;
                          mySR.sortingOrder = theirSR.sortingOrder;
-                         
-                         // Match Z Position ONLY
-                         Vector3 myPos = transform.position;
-                         myPos.z = e.transform.position.z;
-                         transform.position = myPos;
                     }
-                    break; // Found one, stop looking
+                    break; 
                 }
             }
         }
@@ -284,5 +286,52 @@ public class MushroomEnemy : MonoBehaviour
         animator.SetTrigger("Die");
         GetComponent<Collider2D>().enabled = false; // Disable collision
         this.enabled = false; // specific script
+    }
+
+    // Called by EnemySpawner to update patrol center after random spawn
+    public void SetPatrolCenter(float x)
+    {
+        startX = x;
+        this.enabled = true;
+        gameObject.SetActive(true);
+        Debug.Log($"MushroomEnemy {gameObject.name}: Patrol center updated to {x}");
+    }
+
+    // Ensures clones are completely reset
+    public void ResetEnemy()
+    {
+        isDead = false;
+        isAttacking = false;
+        lastAttackTime = 0;
+
+        // Force Visibility
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.enabled = true;
+            sr.color = Color.white;
+            sr.sortingOrder = 105; // Slightly higher than default 100
+        }
+
+        // Force Animator Reset
+        if (animator == null) animator = GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.enabled = true;
+            animator.SetBool("isRunning", false);
+            if (animator.runtimeAnimatorController != null)
+            {
+                animator.Play("Idle", 0, 0);
+            }
+        }
+
+        if (GetComponent<Collider2D>()) GetComponent<Collider2D>().enabled = true;
+
+        // REVIVE!
+        EnemyHealth eh = GetComponent<EnemyHealth>();
+        if (eh != null) eh.ResetHealth();
+
+        this.enabled = true;
+        Debug.Log($"MushroomEnemy {gameObject.name}: Fully RESET for spawning.");
     }
 }

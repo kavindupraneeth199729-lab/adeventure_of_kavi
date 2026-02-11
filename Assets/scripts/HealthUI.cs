@@ -14,7 +14,8 @@ public class HealthUI : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject);
+            Debug.LogWarning($"HealthUI: Duplicate instance on {gameObject.name} destroyed. Keeping existing instance on {Instance.gameObject.name}");
+            Destroy(this); // DESTROY ONLY THE SCRIPT, NOT THE OBJECT!
             return;
         }
         Instance = this;

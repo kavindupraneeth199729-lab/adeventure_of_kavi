@@ -99,34 +99,38 @@ public class SlimeEnemy : MonoBehaviour
 
 
         
+    private void OnDisable() { Debug.Log($"[LIFE] Slime {gameObject.name} was DISABLED at {transform.position}. Trace: {System.Environment.StackTrace}"); }
+    private void OnDestroy() { Debug.Log($"[LIFE] Slime {gameObject.name} was DESTROYED at {transform.position}. Trace: {System.Environment.StackTrace}"); }
+
+    private float lastHeartbeatTime = -99f; 
     void Update()
     {
+        // 1. Heartbeat FIRST (Diagnostic only)
+        if (Time.time > lastHeartbeatTime + 10f)
+        {
+            lastHeartbeatTime = Time.time;
+            Debug.Log($"[HEARTBEAT] Slime {gameObject.name} (Active={gameObject.activeInHierarchy}, Dead={isDead}, Enabled={this.enabled}) at {transform.position}");
+        }
+
         if (isDead) return;
         
-        // Find player if not found
         if (player == null)
         {
             GameObject p = GameObject.FindGameObjectWithTag("Player");
             if (p != null) player = p.transform;
         }
         
-        if (player == null) return; // Still no player, do nothing
-        
-        if (player == null) return; // Still no player, do nothing
+        if (player == null) return; 
         
         // --- RESTORED COPYCAT LOGIC (VISIBILITY KEEPER) ---
-        // Try to copy visibility settings from Dino or Mushroom
-        if (Time.frameCount % 10 == 0) // Check frequently
+        // Keeps sorting in sync with Dino/Mushroom but DOES NOT touch Z anymore
+        if (Time.frameCount % 20 == 0) 
         {
             EnemyHealth[] allEnemies = FindObjectsOfType<EnemyHealth>();
-            bool foundReference = false;
-            
-            // First try to find Dino
             foreach (var e in allEnemies)
             {
-                if (e.gameObject != this.gameObject && e.name.ToLower().Contains("dino"))
+                if (e.gameObject != this.gameObject && (e.name.ToLower().Contains("dino") || e.name.ToLower().Contains("mushroom")))
                 {
-                    // Found a Dino! Copy it!
                     SpriteRenderer theirSR = e.GetComponent<SpriteRenderer>();
                     SpriteRenderer mySR = GetComponent<SpriteRenderer>();
                     
@@ -134,41 +138,9 @@ public class SlimeEnemy : MonoBehaviour
                     {
                          mySR.sortingLayerID = theirSR.sortingLayerID;
                          mySR.sortingOrder = theirSR.sortingOrder;
-                         
-                         // Match Z Position ONLY
-                         Vector3 myPos = transform.position;
-                         myPos.z = e.transform.position.z;
-                         transform.position = myPos;
-                         
-                         foundReference = true;
+                         // CAUTION: Removing Z snapping to prevent depth hiding
                     }
-                    break; // Found one, stop looking
-                }
-            }
-            
-            // If no Dino found, try Mushroom
-            if (!foundReference)
-            {
-                foreach (var e in allEnemies)
-                {
-                    if (e.gameObject != this.gameObject && e.name.ToLower().Contains("mushroom"))
-                    {
-                        // Found a Mushroom! Copy it!
-                        SpriteRenderer theirSR = e.GetComponent<SpriteRenderer>();
-                        SpriteRenderer mySR = GetComponent<SpriteRenderer>();
-                        
-                        if (theirSR != null && mySR != null)
-                        {
-                             mySR.sortingLayerID = theirSR.sortingLayerID;
-                             mySR.sortingOrder = theirSR.sortingOrder;
-                             
-                             // Match Z Position ONLY
-                             Vector3 myPos = transform.position;
-                             myPos.z = e.transform.position.z;
-                             transform.position = myPos;
-                        }
-                        break; // Found one, stop looking
-                    }
+                    break; 
                 }
             }
         }
@@ -332,5 +304,52 @@ public class SlimeEnemy : MonoBehaviour
         animator.SetTrigger("Die");
         GetComponent<Collider2D>().enabled = false; // Disable collision
         this.enabled = false; // specific script
+    }
+
+    // Called by EnemySpawner to update patrol center after random spawn
+    public void SetPatrolCenter(float x)
+    {
+        startX = x;
+        this.enabled = true;
+        gameObject.SetActive(true);
+        Debug.Log($"SlimeEnemy {gameObject.name}: Patrol center updated to {x}");
+    }
+
+    // Ensures clones are completely reset
+    public void ResetEnemy()
+    {
+        isDead = false;
+        isAttacking = false;
+        lastAttackTime = 0;
+        
+        // Force Visibility
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.enabled = true;
+            sr.color = Color.white;
+            sr.sortingOrder = 105; // Slightly higher than default 100
+        }
+
+        // Force Animator Reset
+        if (animator == null) animator = GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.enabled = true;
+            animator.SetBool("isRunning", false);
+            if (animator.runtimeAnimatorController != null)
+            {
+                animator.Play("Idle", 0, 0);
+            }
+        }
+
+        if (GetComponent<Collider2D>()) GetComponent<Collider2D>().enabled = true;
+        
+        // REVIVE!
+        EnemyHealth eh = GetComponent<EnemyHealth>();
+        if (eh != null) eh.ResetHealth();
+
+        this.enabled = true;
+        Debug.Log($"SlimeEnemy {gameObject.name}: Fully RESET for spawning.");
     }
 }

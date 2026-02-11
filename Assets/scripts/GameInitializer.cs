@@ -33,4 +33,18 @@ public class GameInitializer : MonoBehaviour
         
         Debug.Log("GameInitializer: Initialization complete");
     }
+
+    void Start()
+    {
+        // Give the original enemies a moment to initialize their positions
+        Invoke("DelayedEnemySpawning", 0.5f);
+    }
+
+    void DelayedEnemySpawning()
+    {
+        if (EnemySpawner.Instance != null)
+        {
+            EnemySpawner.Instance.SpawnAdditionalEnemies();
+        }
+    }
 }

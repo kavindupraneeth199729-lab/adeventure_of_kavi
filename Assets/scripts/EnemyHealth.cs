@@ -30,11 +30,21 @@ public class EnemyHealth : MonoBehaviour
         col.size = new Vector2(0.2f, 0.5f); 
         col.offset = Vector2.zero;
         col.isTrigger = true; 
+
+        // 4. FORCE HEALTH RESET (Critical for Clones)
+        currentHealth = maxHealth;
+        Debug.Log($"{gameObject.name}: EnemyHealth AWAKE. Health forced to {currentHealth}");
     }
 
     void Start()
     {
         currentHealth = maxHealth;
+    }
+
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+        Debug.Log($"{gameObject.name}: Health reset to {maxHealth}");
     }
     
     public void TakeDamage(int damage)
@@ -67,6 +77,8 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
+        Debug.Log($"{gameObject.name}: DIE() CALLED! Callstack: {System.Environment.StackTrace}");
+
         // Hide bar when dead
         if (HealthUI.Instance != null)
         {
